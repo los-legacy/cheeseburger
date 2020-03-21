@@ -6,14 +6,14 @@ node('chris') {
       'SEARCH_FILENAME=lineage-17.1-$TARGET_DATE-UNOFFICIAL-$env.DEVICE.zip',
       'ROMTYPE="unofficial',
       'VERSION=17.1',
-      'LOCAL_MANIFESTS_URL=https://raw.githubusercontent.com/los-legacy/local_manifests/lineage-17.1/hero.xml',
+      'LOCAL_MANIFESTS_URL=https://raw.githubusercontent.com/los-legacy/local_manifests/lineage-17.1/cheeseburger.xml',
       'LOCAL_MANIFESTS_PATH=.repo/local_manifests', 
    ]) {
       stage('Preparation') { // for display purposes
          sh """#!/bin/bash
             set +e
             rm -rf $env.SYSTEM_PATH/$env.LOCAL_MANIFESTS_PATH/*
-            wget $env.LOCAL_MANIFESTS_URL -O $env.SYSTEM_PATH/$env.LOCAL_MANIFESTS_PATH/hero.xml
+            wget $env.LOCAL_MANIFESTS_URL -O $env.SYSTEM_PATH/$env.LOCAL_MANIFESTS_PATH/cheeseburger.xml
          """
       }
       stage('RepoSync') { // for display purposes
